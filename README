@@ -1,0 +1,47 @@
+
+COMPOSITION DU REPERTOIRE:
+
+    Dossiers:
+        bin: Contient les fichier binaires d'execution.
+        include: Contient les .h (includes).
+        obj: Contient les .o (fichiers objets).
+        src: Contient les fichiers .c (source).
+        test: Contient les fichiers .c de nos tests.
+
+    Fichiers:
+        *.txt: fichiers texts pouvant etre utilisé comme dictionnaire ou texte a verifier.
+        Makefile: Contient les commandes de compilation.
+
+  COMMANDES DE COMPILATION:
+    La commande make permet de compiler l'ensemble des fichiers.
+    Il est aussi possible d'en compiler un seul avec la commande: make nom_de_la_fonction
+    Les noms de fonctions possibles sont: test_lect_dico_liste, test_lect_dico_hashtable, test_lect_dico_arbreprefixe,
+    verificateur_orthographique.
+
+
+  COMMANDES D'EXECUTION
+
+    Tous les arguments utilisés par les fonctions sont passés en ligne de commande
+
+    Pour les tests sépares:
+
+      On doit fournir en ligne de commande deux argumments: le 1er argument est le dictionnaire et le second est le texte à vérifier
+
+        |-> Execution: structure liste: ./bin/test_lect_dico_liste argument1 argument2
+
+
+        |-> Execution: structure hashtable: ./bin/test_lect_dico_hashtable argument1 argument2
+
+
+        |-> Execution: structure arbre prefixe: ./bin/test_lect_dico_arbreprefixe argument1 argument2
+
+
+
+    Pour le test global:
+
+      On doit fournir en ligne de commande trois argumments: le 1er argument est le dictionnaire ,le deuxieme est le texte à vérifier
+      et le 3eme argument précise la structure à utiliser. Pour ce 3eme argument, il doit etre 1 pour la structure liste, 2 pour la
+      table_de_hachage et 3 pour l'arbre prefixe.
+
+
+        |-> Execution: ./bin/verificateur_orthographique argument1 argument2 argument3
